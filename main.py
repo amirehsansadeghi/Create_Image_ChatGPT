@@ -21,7 +21,10 @@ def generate_photo_from_text(text,Size,number):
 
     return image_url
 
-text = "batman art in red and blue color"
-url1 = generate_photo_from_text(text,"1024x1024",1)
+input_text = input ( 'Please enter what are you think ? ')
+size = input ('what size you whant ? (1024x1024 or 254x254) ')
+number_of_the_image = input ('how many image you want create ? ')
+number_of_the_image= int(number_of_the_image)
+url1 = generate_photo_from_text(input_texttext,size,number_of_the_image)
 response = requests.get(url1)
 Image.open(response.raw)
